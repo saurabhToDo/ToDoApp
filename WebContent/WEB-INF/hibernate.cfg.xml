@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration> 
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/to_do</property>
+ 		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+		<property name="hibernate.connection.CharSet">utf8</property>
+		<property name="hibernate.connection.characterEncoding">utf8</property>
+		<property name="hibernate.connection.useUnicode">true</property>
+		<!-- Use the C3P0 connection pool provider -->
+		<property name="hibernate.c3p0.max_size">100000</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.idle_test_period">0</property>
+		<property name="hibernate.c3p0.max_statements">60</property>
+		<property name="hibernate.c3p0.timeout">500</property>
+
+		<property name="hibernate.propertyCycle">100</property>		 
+		<property name="hibernate.max_fetch_depth">0</property>
+		<property name="hibernate.acquireIncrement">3</property>
+		<property name="hibernate.numHelperThreads">6</property>
+		<property name="hibernate.unreturnedConnectionTimeout">500</property>
+		<property name="connection.autoReconnect">true</property>
+		<property name="hibernate.connection.release_mode">after_statement</property>
+		<property name="hibernate.transaction.flush_before_completion">true</property>
+		<!-- <property name="connection.autocommit">true</property> -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- <property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property> -->
+	</session-factory>
+</hibernate-configuration>
